@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>APTP Reclaim MLK Week Calendar</title>
+<style>
+</style>
+
+<script type="text/javascript" src="ical.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+<h1>Hello! Test Page</h1>
+
+<!-- https://calendar.google.com/calendar/ical/en.usa%23holiday%40group.v.calendar.google.com/public/basic.ics -->
+
+<script>
+var ical_addr = "basic.ics";
+var x = $.get(ical_addr, function(data) {
+  console.log('recv');
+  console.log(data);
+  var d = ICAL.parse(data);
+  console.log(d);
+});
+</script>
+
+</body>
+</html>
